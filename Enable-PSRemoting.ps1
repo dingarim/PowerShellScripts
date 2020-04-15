@@ -4,7 +4,7 @@ Enable-PSRemoting –force
 Set-Service WinRM -StartMode Automatic
 
 # Verify start mode and state - it should be running
-Get-WmiObject -Class win32_service | Where-Object {$_.name -like "WinRM"}
+#Get-WmiObject -Class win32_service | Where-Object {$_.name -like "WinRM"}
 
 # Trust all hosts
 Set-Item WSMan:localhost\client\trustedhosts -value *
